@@ -8,7 +8,9 @@
   "portsAttributes": {
     "6080": { "label": "noVNC", "onAutoForward": "openBrowser" }
   },
-  "postCreateCommand": "bash .devcontainer/setup-kali.sh",
   "remoteUser": "root",
-  "containerEnv": { "DISPLAY": ":1" }
+  "containerEnv": {
+    "DISPLAY": ":1",
+    "DEBIAN_FRONTEND": "noninteractive"
+  }
 }
