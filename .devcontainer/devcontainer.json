@@ -1,0 +1,17 @@
+﻿{
+  "name": "Kali Linux VNC",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "password": "kali",
+      "vncPassword": "kali"
+    }
+  },
+  "forwardPorts": [6080, 5901],
+  "portsAttributes": {
+    "6080": { "label": "noVNC Web", "onAutoForward": "openBrowser" },
+    "5901": { "label": "VNC" }
+  },
+  "postCreateCommand": "bash .devcontainer/setup-kali.sh",
+  "remoteUser": "vscode"
+}
